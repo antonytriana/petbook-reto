@@ -1,9 +1,10 @@
+<app-navbar (tipoCategoria)="cambiarCategoria($event)"></app-navbar>
 <div class="container" style="padding-top: 16px;">
     <div class="row">
-      <div class="col-sm" *ngFor="let item of images; let i = index"
+      <div class="col-sm" *ngFor="let item of imagenes; let i = index"
       [lightbox]="i"
       [gallery]="galleryId" style="padding: 16px;">
       <img [src]="item.data.thumb"/>
     </div>
     </div>
-  </div>
+</div>
