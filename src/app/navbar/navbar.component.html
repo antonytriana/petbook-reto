@@ -1,19 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">PetBook</a>
+      <a class="navbar-brand" href="#" (click)="enviarCategoria('mascotas')">PetBook</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#" (click)="prueba()">Home</a>
+            <a class="nav-link" href="#" (click)="enviarCategoria('perro')">Perros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#" (click)="enviarCategoria('erizo')">Erizos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#" (click)="enviarCategoria('caballo')">Caballos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" (click)="enviarCategoria('gato')">Gatos</a>
           </li>
         </ul>
       </div>
