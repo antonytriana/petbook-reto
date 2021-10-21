@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GalleryModule } from 'ng-gallery';
+import { LightboxModule } from  'ng-gallery/lightbox';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +16,12 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    GalleryModule,
+    LightboxModule.withConfig({
+      panelClass: 'fullscreen'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
