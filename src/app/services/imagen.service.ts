@@ -31,7 +31,11 @@ export class ImagenService {
   }
 
   obtenerCategoria(categoria: string) {
-    this.imagenes = IMAGENES.filter(e => e.data.type == categoria)
+    if(categoria === 'mascotas'){
+      this.imagenes = IMAGENES;
+    }else{
+      this.imagenes = IMAGENES.filter(e => e.data.type === categoria)
+    }
     return this.imagenes;
   }
 
