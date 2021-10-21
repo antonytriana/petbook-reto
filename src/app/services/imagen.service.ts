@@ -31,9 +31,9 @@ export class ImagenService {
   }
 
   obtenerCategoria(categoria: string) {
-    if(categoria === 'mascotas'){
+    if (categoria === 'mascotas') {
       this.imagenes = IMAGENES;
-    }else{
+    } else {
       this.imagenes = IMAGENES.filter(e => e.data.type === categoria)
     }
     return this.imagenes;
@@ -42,6 +42,6 @@ export class ImagenService {
   cargarImagenesEnGaleria() {
     const galleryRef = this.gallery.ref(this.galleryId);
     galleryRef.load(this.imagenes);
-    galleryRef.state.subscribe(e => { console.log(e) })
+    return galleryRef;
   }
 }
